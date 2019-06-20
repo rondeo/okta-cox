@@ -83,6 +83,8 @@ function update_ui_logged_in(username, res_obj) {
 
 	$("#un").html(username)
 
+	$("#apps_div").show()
+
 	$("#authn").hide()
 
 	$("#widget-container").hide()
@@ -99,6 +101,8 @@ function update_ui_logged_in(username, res_obj) {
 <script>
 
 function update_ui_logged_out() {
+
+	$("#apps_div").hide()
 
 	$("#authn").show()
 
@@ -171,7 +175,7 @@ function update_ui_logged_out() {
 
 				<div class="row">
 
-					<div id = "apps" style = "text-align: left; margin-top: 20px; display: none">
+					<div id = "apps_div" style = "text-align: left; margin-top: 20px; display: none">
 
 						<h3>apps</h3>
 
