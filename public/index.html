@@ -57,11 +57,6 @@
 
 <!--ui functions -->
 
-
-
-
-
-
 <script>
 function log_out() {
 	localStorage.clear()
@@ -73,10 +68,10 @@ function log_out() {
 	signIn.session.close(function (err) {
 		if (err) {
 			// The user has not been logged out, perform some error handling here.
-			location.replace('http://localhost:3993')
+			location.replace('https://okta-cox.herokuapp.com')
 			return
 		}
-		location.replace('http://localhost:3993')
+		location.replace('https://okta-cox.herokuapp.com')
 	})
 }
 </script>
@@ -159,20 +154,11 @@ function update_ui_logged_out() {
 
 				<li class="list-group-item"><a href='/apps.html'>access applications</a></li>
 
-				<li class="list-group-item"><a href='/never_customer_register'>reg flow: self-driven reg for &#x27;never customers&#x27;</a></li>
-
+				<li class="list-group-item"><a href='/never_customer_register'>reg flow: self-driven reg for "never customers"</a></li>
 
 				<li class="list-group-item"><a href='/regular_user_register'>reg flow: self-driven reg for regular customers</a></li>
 
-
-				<li class="list-group-item"><a href='/register_via_api'>user registers via API</a></li>
-
-
-				<li class="list-group-item"><a href='/register_via_api_post_group_id'>user registers via API, add to group</a></li>
-
-
 				<li class="list-group-item"><a href='/widget_standard'>plain widget authn (not OIDC)</a></li>
-
 
 				</ul>
 
@@ -238,7 +224,7 @@ signIn.session.get(function (res) {
 		signIn.renderEl(
 			{ el: '#widget-container' },
 			function success(res) {
-				res.session.setCookieAndRedirect("http://localhost:3993/home")
+				res.session.setCookieAndRedirect("https://okta-cox.herokuapp.com/home")
 			},
 			function error(err) {
 				console.log("something went wrong with the login effort")
