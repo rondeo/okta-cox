@@ -1,0 +1,35 @@
+
+<main role="main" class="container">
+	<div class="starter-template">
+
+		<div class="row">
+
+			<!-- main_content_html -->
+			{{#> main_content_html }}
+			{{/main_content_html}}
+
+		</div>
+
+		<div class="row">
+
+			<!-- okta session info, tokens, etc. -->
+			<div class="col-6">
+
+				<div id = "okta_session_token_div" style = "display: none; text-align: left; border-style: solid; border-width: thin; padding: 5px">
+					<div style = "text-align: center"><button type="button" class="btn btn-primary">Okta session token</button></div>
+					<pre><span id = "okta_session_token"></span></pre>
+				</div>
+
+				<div id = "okta_authn_results_div" style = "display: none; text-align: left; border-style: solid; border-width: thin; padding: 5px">
+					<div style = "text-align: center"><button type="button" class="btn btn-primary">Okta authn results</button></div>
+					<pre><span id = "okta_authn_results"></span></pre>
+				</div>
+
+				<div id = "okta_session_div" style = "display: none; text-align: left; border-style: solid; border-width: thin; padding: 5px">
+					<div style = "text-align: center"><button type="button" class="btn btn-primary">Okta session</button></div>
+					<pre><span id = "okta_session_obj"></span></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>

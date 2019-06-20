@@ -1,0 +1,103 @@
+{
+
+	"home": {
+		"friendly_name": "available flows",
+		"desc": "all flows available for this PoC",
+		"required_settings": [
+		],
+		"required_partials": [
+			"other_css"
+		]
+	},
+	"widget_standard": {
+		"friendly_name": "plain widget authn (not OIDC)",
+		"desc": "user authenticates against Okta and gets a session cookie",
+		"required_settings": [
+			"OKTA_WIDGET_CSS_URL",
+			"OKTA_WIDGET_JS_URL"
+		],
+		"required_partials": [
+			"log_out_js",
+			"update_ui_logged_in_js",
+			"update_ui_logged_out_js",
+			"widget_js"
+		]
+	},
+	"register_via_api": {
+		"friendly_name": "user registers via API",
+		"desc": "self-driven user registration via API with authentication",
+		"required_settings": [
+			"OKTA_WIDGET_CSS_URL",
+			"OKTA_WIDGET_JS_URL"
+		],
+		"required_partials": [
+			"evaluate_reg_form_js",
+			"log_out_js",
+			"show_log_in_form_js",
+			"show_reg_form_js",
+			"update_ui_logged_in_js",
+			"update_ui_logged_out_js",
+			"widget_js"
+		]
+	},
+	"register_via_api_post_group_id": {
+		"friendly_name": "user registers via API, add to group",
+		"desc": "self-driven user registration via API with authentication. User is added to a specific group.",
+		"required_settings": [
+			"OKTA_WIDGET_CSS_URL",
+			"OKTA_WIDGET_JS_URL"
+		],
+		"required_partials": [
+			"evaluate_reg_form_js",
+			"log_out_js",
+			"other_css",
+			"show_log_in_form_js",
+			"show_reg_form_js",
+			"update_ui_logged_in_js",
+			"update_ui_logged_out_js",
+			"widget_js"
+		]
+	},
+
+	"never_customer_register": {
+		"friendly_name": "reg flow: self-driven reg for 'never customers'",
+		"desc": "self-driven user registration via API with authentication. User is added to a specific group.",
+		"required_settings": [
+			"LOGO",
+			"OKTA_WIDGET_CSS_URL",
+			"OKTA_WIDGET_JS_URL"
+		],
+		"required_partials": [
+			"log_out_js",
+			"other_css",
+			"reg_link",
+			"show_log_in_form_js",
+			"show_reg_form_js",
+			"update_ui_logged_in_js",
+			"update_ui_logged_out_reg_js",
+			"widget_js"
+		]
+	},
+
+	"regular_user_register": {
+		"friendly_name": "reg flow: self-driven reg for regular customers",
+		"desc": "self-driven user registration via API with authentication. User is added to a specific group.",
+		"required_settings": [
+			"LOGO",
+			"OKTA_WIDGET_CSS_URL",
+			"OKTA_WIDGET_JS_URL"
+		],
+		"required_partials": [
+			"log_out_js",
+			"other_css",
+			"reg_link",
+			"show_log_in_form_js",
+			"show_reg_form_js",
+			"update_ui_logged_in_js",
+			"update_ui_logged_out_reg_js",
+			"widget_js"
+		]
+	}
+
+
+}

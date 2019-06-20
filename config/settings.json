@@ -1,0 +1,68 @@
+{
+
+	"BOOTSTRAP_JS_URL": {
+		"load": true,
+		"val": "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+	},
+
+	"BOOTSTRAP_MAIN_CSS_URL": {
+		"load": true,
+		"val": "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	},
+	"BOOTSTRAP_STARTER_CSS_URL": {
+		"load": true,
+		"val": "https://getbootstrap.com/docs/4.2/examples/starter-template/starter-template.css"
+	},
+	"FLOWS": {
+		"load": true,
+		"val": "home, oidc, oidc_federation, oidc_federation02, passwordless_email, widget_standard, session_token_only, register_via_api, social_auth"
+	},
+	"JQUERY_URL": {
+		"load": true,
+		"val": "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+	},
+	"BRAND": {
+		"load": true,
+		"val": "Okta"
+	},
+	"FAVICON_URL": {
+		"load": true,
+		"val": "https://www.okta.com/sites/all/themes/developer/favicon.ico"
+	},
+	"LOGO": {
+		"load": false,
+		"val": "https://tom-smith-okta-demo-images.s3.amazonaws.com/cox/okta_logo.png"
+	},
+	"IMG_RT_COL": {
+		"load": true,
+		"val": "https://s3.amazonaws.com/tom-smith-okta-demo-images/Mom_daughter_with_veggies_Small.jpg"
+	},
+	"NAVBAR_CLASS": {
+		"load": true,
+		"val": "navbar navbar-expand-md navbar-dark bg-dark fixed-top"
+	},
+	"OTHER_CSS_URL": {
+		"load": false,
+		"val": "/css/custom.css"
+	},
+	"OKTA_TENANT": {
+		"load": true,
+		"val": "https://dev-788660.okta.com"
+	},
+	"OKTA_WIDGET_CSS_URL": {
+		"load": false,
+		"val": "https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/2.16.0/css/okta-sign-in.min.css"
+	},
+	"OKTA_WIDGET_JS_URL": {
+		"load": false,
+		"val": "https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/2.16.0/js/okta-sign-in.min.js"
+	},
+	"TITLE_BASE": {
+		"load": true,
+		"val": "Okta flows"
+	},
+	"WELCOME_MSG": {
+		"load": true,
+		"val": "Welcome to this portal!"
+	}
+}

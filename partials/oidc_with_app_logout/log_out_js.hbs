@@ -1,0 +1,36 @@
+
+<script>
+function log_out() {
+
+	if (signIn.tokenManager.get('id_token')) {
+		var token = signIn.tokenManager.get('id_token')
+
+		$.post(
+			"/oidc_with_app_logout",
+			{ id_token: token.idToken },
+			function( data ) {
+				console.log( data )
+			},
+			"json"
+		)
+	}
+	else {
+		console.log("no id token found in token manager.")
+	}
+
+	localStorage.clear()
+
+	sessionStorage.clear()
+
+	signIn.tokenManager.clear()
+
+	signIn.session.close(function (err) {
+		if (err) {
+			// The user has not been logged out, perform some error handling here.
+			location.replace('{{redirect_uri}}')
+			return
+		}
+		location.replace('{{redirect_uri}}')
+	})
+}
+</script>

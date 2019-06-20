@@ -1,0 +1,23 @@
+
+<script>
+function copy_token(token_el_id) {
+	var el = document.createElement('textarea');
+
+	el.value = document.getElementById(token_el_id).textContent;
+
+	el.setAttribute('readonly', '');
+
+	el.style = {position: 'absolute', left: '-9999px'};
+
+	document.body.appendChild(el);
+
+	el.select();
+
+	document.execCommand('copy');
+
+	document.body.removeChild(el);
+
+	$("#copy_button").removeClass().addClass("btn btn-default")
+
+}
+</script>

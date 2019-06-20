@@ -1,0 +1,45 @@
+{
+
+	"copy_token_js": {
+		"load": false
+	},
+	"evaluate_reg_form_js": {
+		"load": false
+	},
+	"log_out_js": {
+		"load": false
+	},
+	"main_container_html": {
+		"load": true
+	},
+	"main_content_html": {
+		"load": true
+	},
+	"nav_html": {
+		"load": true
+	},
+	"other_css": {
+		"load": false
+	},
+	"reg_link": {
+		"load": false
+	},
+	"show_log_in_form_js": {
+		"load": false
+	},
+	"show_reg_form_js": {
+		"load": false
+	},
+	"update_ui_logged_in_js": {
+		"load": false
+	},
+	"update_ui_logged_out_js": {
+		"load": false
+	},
+	"update_ui_logged_out_reg_js": {
+		"load": false
+	},
+	"widget_js": {
+		"load": false
+	}
+}

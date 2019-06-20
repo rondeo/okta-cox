@@ -1,0 +1,66 @@
+
+<script>
+
+var signIn = new OktaSignIn({
+	baseUrl: '{{okta_tenant}}',
+	clientId: '{{client_id}}',
+	redirectUri: '{{redirect_uri}}',
+	authParams: {
+		responseType: 'id_token',
+		display: 'page'
+	}
+})
+
+if (!signIn.token.hasTokensInUrl()) {}
+
+// The user has redirected back after authenticating and has their access or
+// ID Token in the URL.
+else {
+	signIn.token.parseTokensFromUrl(
+		function success(res) {
+			signIn.tokenManager.add('id_token', res)
+			var token = signIn.tokenManager.get('id_token')
+			console.log("the id token is: " + token.idToken)
+			console.log("the larger token object is:")
+			console.dir(token)
+		},
+		function error(err) {
+			// handleError(err);
+		}
+	);
+}
+
+
+signIn.session.get(function (res) {
+
+	console.log("the result of the session.get call is:")
+	console.dir(res)
+
+	// Session exists, show logged in state.
+	if (res.status === 'ACTIVE') {
+		console.log("the user has a session")
+		update_ui_logged_in(res.login)
+	}
+	// No session, or error retrieving the session. Render the Sign-In Widget.
+	else if (res.status === 'INACTIVE') {
+
+		console.log("the user does not have a session")
+
+		$("#authn").show()
+		$("#widget-container").show()
+
+		signIn.renderEl(
+			{ el: '#widget-container' },
+			function success(res) {
+				res.session.setCookieAndRedirect("{{redirect_uri}}")
+				update_ui_logged_in()
+
+			},
+			function error(err) {
+				console.log("something went wrong with the login effort")
+			}
+		)
+	}
+});
+
+</script>

@@ -1,0 +1,43 @@
+
+			<div class="col-6">
+
+				<h2>{{WELCOME_MSG}}</h2>
+
+				<div id = "welcome" style = "display: none">
+					<p>It's great to have you here, <span id="un" style="background: yellow"></span>!</p>
+				</div>
+
+				<div id = "authn" style = "display: none">
+					<p class="lead" style="margin-top:20px">Please sign in or register to get started.</p>
+
+					<div id = "widget-container" style = "display: none"></div>
+				</div>
+
+				<div id = "reg_form_div" style = "display: none; text-align: left">
+
+					<p><b>Register</b></p>
+
+{{!-- 					<form action="#" id="reg_form">
+ --}}
+					<form id="reg_form" method="POST" action="/register_via_api">
+
+						<p>first name: <input type="text" size = "20" id="first_name" name="firstName"></p>
+						<p>last name: <input type = "text" size = "20" id="last_name" name="lastName"></p>
+						<p>email: <input type = "email" size = 40 id="email" name="email"></p>
+						<p>password: <input type = "password" size = 40 id="password" name="password"></p>
+
+						<input type="submit"></input>
+
+{{!-- 						<button onclick="evaluate_reg_form()">submit</button>
+ --}}
+					</form>
+
+				</div>
+
+			</div>
+
+			<div class="col-6">
+
+				<img src="{{IMG_RT_COL}}">
+
+			</div>

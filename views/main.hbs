@@ -1,0 +1,84 @@
+<html>
+
+<head>
+
+<title>{{TITLE}}</title>
+
+<link href="{{FAVICON_URL}}" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+
+<!-- css -->
+
+<!-- bootstrap main css -->
+<link href="{{BOOTSTRAP_MAIN_CSS_URL}}" rel="stylesheet" type="text/css" />
+
+<!-- bootstrap starter template css -->
+<link href="{{BOOTSTRAP_STARTER_CSS_URL}}" rel="stylesheet" type="text/css" />
+
+<!-- okta widget css -->
+<link href="{{OKTA_WIDGET_CSS_URL}}" rel="stylesheet" type="text/css" />
+
+<!-- other css -->
+<link href="{{OTHER_CSS_URL}}" rel="stylesheet" type="text/css" />
+
+{{#> other_css }}
+{{/other_css}}
+
+<!-- javascript -->
+
+<!-- jquery -->
+<script src="{{JQUERY_URL}}" type="text/javascript"></script>
+
+<!-- bootstrap -->
+<script src="{{BOOTSTRAP_JS_URL}}" type="text/javascript"></script>
+
+<!-- okta login widget -->
+<script src="{{OKTA_WIDGET_JS_URL}}" type="text/javascript"></script>
+
+<!-- okta authentication sdk -->
+<script src="{{OKTA_AUTH_SDK_JS_URL}}" type="text/javascript"></script>
+
+<!--ui functions -->
+
+{{#> copy_token_js }}
+{{/copy_token_js}}
+
+{{#> evaluate_reg_form_js }}
+{{/evaluate_reg_form_js}}
+
+{{#> show_log_in_form_js }}
+{{/show_log_in_form_js}}
+
+{{#> show_reg_form_js }}
+{{/show_reg_form_js}}
+
+{{#> log_out_js }}
+{{/log_out_js}}
+
+{{#> update_ui_logged_in_js }}
+{{/update_ui_logged_in_js}}
+
+{{#> update_ui_logged_out_js }}
+{{/update_ui_logged_out_js}}
+
+{{#> update_ui_logged_out_reg_js }}
+{{/update_ui_logged_out_reg_js}}
+
+{{#> other_js }}
+{{/other_js}}
+
+</head>
+
+<body>
+
+{{#> nav_html }}
+{{/nav_html}}
+
+{{#> main_container_html }}
+{{/main_container_html}}
+
+{{#> widget_js }}
+{{/widget_js}}
+
+</body>
+
+</html>

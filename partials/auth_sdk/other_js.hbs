@@ -1,0 +1,57 @@
+<!-- 
+// file is found, but does not work
+<script src="https://tom-smith-okta.s3.us-east-2.amazonaws.com/okta-auth-js/okta-auth-js.min.js" type="text/javascript"></script>
+
+// file is found, but does not work
+<script src="/okta-auth-js.min.js" type="text/javascript"></script>
+ -->
+
+<script>
+var config = {
+	url: '{{okta_tenant}}'
+};
+
+var authClient = new OktaAuth(config);
+
+authClient.session.exists()
+.then(function(exists) {
+	if (exists) {
+		// logged in
+		console.log("authn SDK: the user has a session.")
+
+		authClient.session.get()
+		.then(function(session) {
+			console.log("the user session is: ")
+			console.log(session)
+			update_ui_logged_in(session.login)
+		})
+		.catch(function(err) {
+			// not logged in
+		});
+	}
+	else {
+		// not logged in
+		console.log("authn SDK: the user does not have a session.")
+
+		authClient.signIn({
+			username: 'mary.shelley',
+			password: 'Okta1234!'
+		})
+		.then(function(transaction) {
+
+			if (transaction.status === 'SUCCESS') {
+
+				console.log("the transaction was a success!")
+				authClient.session.setCookieAndRedirect(transaction.sessionToken); // Sets a cookie on redirect
+			}
+			else {
+				throw 'We cannot handle the ' + transaction.status + ' status';
+			}
+		})
+		.fail(function(err) {
+			console.error(err);
+		});
+	}
+});
+
+</script>

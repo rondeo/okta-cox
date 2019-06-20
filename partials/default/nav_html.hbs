@@ -1,0 +1,28 @@
+
+<nav class="{{NAVBAR_CLASS}}">
+
+	<a class="navbar-brand" href="/">{{BRAND}}</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+		<ul class="navbar-nav mr-auto">
+
+			<li class="nav-item active">
+				<a class="nav-link" href="#" onclick="log_out()" style="display:none" id="log_out_link">Log out</span></a>
+			</li>
+
+			<li class="nav-item active">
+				<a class="nav-link" href="#" onclick="show_log_in_form()" style="display:none" id="log_in_link">Log in</span></a>
+			</li>
+
+			{{#> reg_link}}
+			{{/reg_link}}
+
+			{{#> other_links }}
+			{{/other_links}}
+
+		</ul>
+	</div>
+</nav>

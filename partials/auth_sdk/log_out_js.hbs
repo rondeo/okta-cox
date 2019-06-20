@@ -1,0 +1,18 @@
+
+<script>
+function log_out() {
+	localStorage.clear()
+
+	sessionStorage.clear()
+
+	authClient.signOut()
+	.then(function() {
+		location.replace('{{REDIRECT_URI}}')
+	})
+	.fail(function(err) {
+		console.error(err)
+		location.replace('{{REDIRECT_URI}}')
+		return
+	});
+}
+</script>

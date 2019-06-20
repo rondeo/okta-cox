@@ -1,0 +1,19 @@
+<script>
+
+function update_ui_logged_in(username, res_obj) {
+
+	$("#un").html(username)
+
+	$("#authn").hide()
+
+	$("#widget-container").hide()
+
+	$("#log_out_link").show()
+
+	$("#welcome").show()
+
+	$("#okta_session_obj").html(JSON.stringify(res_obj, null, 1))
+	$("#okta_session_div").show()
+}
+
+</script>

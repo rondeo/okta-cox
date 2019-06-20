@@ -1,0 +1,33 @@
+
+			<div class="col-6">
+
+				<h2>{{WELCOME_MSG}}</h2>
+
+				<div id = "welcome" style = "display: none">
+					<p>It's great to have you here, <span id="un" style="background: yellow"></span>!</p>
+				</div>
+
+				<div id = "authn" style = "display: none">
+					<p class="lead" style="margin-top:20px">Please sign in or register to get started.</p>
+
+					<div id = "widget-container" style = "display: none"></div>
+				</div>
+
+				<div id = "register" style = "display:none">
+					<form action = "/passwordless_email/register" method = "post">
+
+						<p>create a new account with just your email!</p>
+
+						email: <input type = "text" name = "email" size = 40>
+
+						<input type = "submit" name = "submit">
+
+					</form>
+				</div>
+			</div>
+
+			<div class="col-6">
+
+				<img src="{{IMG_RT_COL}}">
+
+			</div>

@@ -1,0 +1,44 @@
+
+<script>
+
+var signIn = new OktaSignIn({
+	baseUrl: '{{OKTA_TENANT}}',
+	clientId: '{{CLIENT_ID}}',
+	redirectUri: '{{REDIRECT_URI}}',
+	authParams: {
+		responseType: 'id_token',
+		display: 'page'
+	}
+})
+
+signIn.session.get(function (res) {
+
+	console.log("the result of the session.get call is:")
+	console.dir(res)
+
+	// Session exists, show logged in state.
+	if (res.status === 'ACTIVE') {
+		console.log("the user has a session")
+		update_ui_logged_in(res.login, res)
+	}
+	// No session, or error retrieving the session. Render the Sign-In Widget.
+	else if (res.status === 'INACTIVE') {
+
+		console.log("the user does not have a session")
+
+		$("#authn").show()
+		$("#widget-container").show()
+
+		signIn.renderEl(
+			{ el: '#widget-container' },
+			function success(res) {
+				res.session.setCookieAndRedirect("{{REDIRECT_URI}}")
+			},
+			function error(err) {
+				console.log("something went wrong with the login effort")
+			}
+		)
+	}
+});
+
+</script>

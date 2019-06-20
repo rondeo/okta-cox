@@ -1,0 +1,19 @@
+
+<script>
+function log_out() {
+	localStorage.clear()
+
+	sessionStorage.clear()
+
+	signIn.tokenManager.clear()
+
+	signIn.session.close(function (err) {
+		if (err) {
+			// The user has not been logged out, perform some error handling here.
+			location.replace('{{REDIRECT_URI}}')
+			return
+		}
+		location.replace('{{REDIRECT_URI}}')
+	})
+}
+</script>
