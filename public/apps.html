@@ -159,21 +159,40 @@ function update_ui_logged_out() {
 					<div id = "widget-container" style = "display: none"></div>
 				</div>
 
-				<div id = "apps" style = "">
+			</div>
 
-					<p><a href="https://coxcommunications.okta.com/oauth2/v1/authorize?client_id=0oaqzi35k89pO9SXW356&redirect_uri=https://okta-cox.herokuapp.com/apps.html&response_type=id_token&response_mode=fragment&scope=openid+email+profile&state=somestate&nonce=somenonce&prompt=none">log in to OIDC app 01</a></p>
+			<div class="col-6">
 
-					<p><a href="https://coxcommunications.okta.com/oauth2/v1/authorize?client_id=0oaqzlmrw50G2IrMT356&redirect_uri=https://okta-cox.herokuapp.com/apps.html&response_type=id_token&response_mode=fragment&scope=openid+email+profile&state=somestate&nonce=somenonce&prompt=none">log in to restricted OIDC app (app 02)</a></p>
+				<div class="row">
+
+					<img src="https://tom-smith-okta-demo-images.s3.amazonaws.com/cox/cox_image.png">
+
+				</div>
+
+				<div class="row">
+
+					<div id = "apps" style = "text-align: left; margin-top: 20px">
+
+						<h3>apps</h3>
+
+						<p><a href="https://coxcommunications.okta.com/oauth2/v1/authorize?client_id=0oaqzi35k89pO9SXW356&redirect_uri=https://okta-cox.herokuapp.com/apps.html&response_type=id_token&response_mode=fragment&scope=openid+email+profile&state=somestate&nonce=somenonce&prompt=none">
+
+							<button type="button" class="btn btn-info">OIDC app (open)</button>
+
+						</a></p>
+
+						<p><a href="https://coxcommunications.okta.com/oauth2/v1/authorize?client_id=0oaqzlmrw50G2IrMT356&redirect_uri=https://okta-cox.herokuapp.com/apps.html&response_type=id_token&response_mode=fragment&scope=openid+email+profile&state=somestate&nonce=somenonce&prompt=none">
+							<button type="button" class="btn btn-info">OIDC app (restricted)</button>
+
+						</a></p>
+
+					</div>
 
 				</div>
 
 			</div>
 
-			<div class="col-6">
 
-				<img src="https://tom-smith-okta-demo-images.s3.amazonaws.com/cox/cox_image.png">
-
-			</div>
 
 		</div>
 
