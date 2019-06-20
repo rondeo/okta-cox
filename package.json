@@ -15,6 +15,7 @@
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "fs": "0.0.1-security",
+    "handlebars": "^4.1.2",
     "hbs": "^4.0.4",
     "install": "^0.12.2",
     "npm": "^6.9.0",
