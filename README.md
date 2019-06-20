@@ -33,15 +33,19 @@ The code is identical to the never customer flow, with the exception of the grou
 
 ```app.post('/regular_user_register'...```
 
-3. "Plain" authentication with the Okta widget: a baseline flow for allowing users to authenticate and get an Okta session.
+3. Application access: when a user authenticates, they see a list of applications. All users will see all application buttons.
+
+OIDC (open): all users are assigned. An id token will be returned as a hash value in the url
+OIDC (restricted): only members of the "regular users" group are assigned. Regular users will get an id token in the url. Forbidden users will see an error message in the URL.
+SAML (open): all users are assigned. Users will be JIT provisioned to Salesforce if they do not exist in SF already.
 
 ## Reviewing the code ##
 
 ### Front end ###
-The web pages in ther app are built on-the-fly using a custom engine. So, if you want to see what's going on in the front end, it's best just view the source of the page. If you want to add another page to the app, you can work with Okta to create a new dynamically generated page, or just copy an existing page and add it to the `/public` directory.
+Some pages in the app are built on-the-fly using a custom engine. So, if you want to see what's going on in the front end, it's best just view the source of the page. If you want to add another page to the app, you can work with Okta to create a new dynamically generated page, or just copy an existing page and add it to the `/public` directory.
 
 ### Back end ###
 The post routes are included in the main `app.js` file.
 
 ### Configuration ###
-The app makes heavy use of the `dotenv` package to abstract as much configuration out of the app as possible. If you are loading this app on local host or some other server, copy the `.env_example` file to a file called `.env` to make those values available to yourt app.
+The app makes heavy use of the `dotenv` package to abstract as much configuration out of the app as possible. If you are loading this app on local host or some other server, copy the `.env_example` file to a file called `.env` to make those values available to your app.
